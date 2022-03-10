@@ -17,7 +17,8 @@ const isLiked = (id) => {
 
 const addToLiked = (id) => {
   likedPostsId.push(id);
-  showPosts(posts);
+  const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+  showPosts(remainingPosts);
 };
 
 const reportPost = (id) => {
@@ -36,16 +37,19 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById('question').style.display = 'block'
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById('question').style.display = 'none'
 
     displayLikedPosts();
   } else {
     document.getElementById("reported").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
+    document.getElementById('question').style.display = 'none'
 
     displayReportedPosts();
   }
@@ -162,6 +166,7 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  // document.getElementById('question').style.display = 'none'
   document.getElementById('reported').innerHTML = ''
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
