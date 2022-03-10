@@ -16,7 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-  likedPostsId.plus(id);
+  likedPostsId.push(id);
   showPosts(posts);
 };
 
@@ -53,7 +53,7 @@ const switchTab = (id) => {
 
 const createPost = (post) => {
   // console.log(post.comments[0].user)
-  console.log(post.description)
+  console.log(post.id)
   const userImage = post.userImage;
   const image = post.image;
   const div = document.createElement("article");
@@ -137,20 +137,27 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
+  console.log(posts)
   const productsContainer = document.getElementById("posts");
   productsContainer.innerHTML = "";
 
   posts.forEach((post) => {
+    // console.log(post)
     const div = createPost(post);
     productsContainer.appendChild(div);
   });
 };
 
 const displayLikedPosts = () => {
+
+  document.getElementById('liked').innerHTML = ''
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
+    console.log(post)
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
+
+
   });
 };
 
