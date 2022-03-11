@@ -50,17 +50,18 @@
     <main class="main container mx-auto p-3">
         <div id="posts">
         </div>
-
+        <h1 id="like">Liked posts</h1>
         <div id="liked">
-            <h1>Liked posts</h1>
-        </div>
 
+        </div>
+        <h1 id="report">Reported posts</h1>
         <div id="reported">
-            <h1>Reported posts</h1>
+
         </div>
     </main>
 
-    <section class="shadow-lg p-3 mb-5 bg-body rounded w-50 mx-auto" id="question">
+    <section class="shadow-lg p-3 mb-5 bg-body rounded w-50 mx-auto my-5" id="question">
+        <h2 class="text-center">Question and Answer</h2>
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -93,11 +94,15 @@
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingTwo">
                     <div class="accordion-body">
-                        <strong>Answer:</strong> Local storage and Session Storage works in a same way.Both storage has 4 methods.But there are
+                        <strong>Answer:</strong> Local storage and Session Storage works in a same way.Both storage has
+                        4 methods.But there are
                         some difference between local storage and session storage.Local Storage store data.When the
                         browser tab
                         or window is closed,the data which store in local storage does not expire.It remains,data is not
-                        lost.On the other hand,In session storage,when the browser tab is closed ,data will be lost.but we can set value in the same way in both storage.We can store single value easily.But if we want to store object or array in both storage ,it have to convert into string with JSON.stringify,then will be stored in storage.
+                        lost.On the other hand,In session storage,when the browser tab is closed ,data will be lost.but
+                        we can set value in the same way in both storage.We can store single value easily.But if we want
+                        to store object or array in both storage ,it have to convert into string with
+                        JSON.stringify,then will be stored in storage.
                     </div>
                 </div>
             </div>

@@ -38,11 +38,15 @@ const switchTab = (id) => {
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
     document.getElementById('question').style.display = 'block'
+    document.getElementById('like').style.display = 'none'
+    document.getElementById('report').style.display = 'none'
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
     document.getElementById('question').style.display = 'none'
+    document.getElementById('like').style.display = 'block'
+    document.getElementById('report').style.display = 'none'
 
     displayLikedPosts();
   } else {
@@ -50,6 +54,8 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
     document.getElementById('question').style.display = 'none'
+    document.getElementById('like').style.display = 'none'
+    document.getElementById('report').style.display = 'block'
 
     displayReportedPosts();
   }
