@@ -50,6 +50,7 @@
     <main class="main container mx-auto p-3">
         <div id="posts">
         </div>
+
         <div id="liked">
             <h1>Liked posts</h1>
         </div>
@@ -59,7 +60,7 @@
         </div>
     </main>
 
-    <section class="shadow-lg p-3 mb-5 bg-body rounded w-75 text-center mx-auto" id="question">
+    <section class="shadow-lg p-3 mb-5 bg-body rounded w-50 mx-auto" id="question">
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -86,41 +87,21 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseTwo">
-                        Accordion Item #2
+                        <span class="fw-bold">What is the difference between Local Storage and Session Storage?</span>
                     </button>
                 </h2>
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingTwo">
                     <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <strong>Answer:</strong> Local storage and Session Storage works in a same way.Both storage has 4 methods.But there are
+                        some difference between local storage and session storage.Local Storage store data.When the
+                        browser tab
+                        or window is closed,the data which store in local storage does not expire.It remains,data is not
+                        lost.On the other hand,In session storage,when the browser tab is closed ,data will be lost.but we can set value in the same way in both storage.We can store single value easily.But if we want to store object or array in both storage ,it have to convert into string with JSON.stringify,then will be stored in storage.
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseThree">
-                        Accordion Item #3
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                    aria-labelledby="panelsStayOpen-headingThree">
-                    <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
 
